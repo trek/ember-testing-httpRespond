@@ -11,6 +11,9 @@ This makes it easy to test sitautons like:
   * Multiple requests to the same url
   * The effect of multiple simultaneous requests that complete in a specifc order
 
+Using HTTP response emitting instead of the fixture feature of Ember Data or Ember Model
+ensures that the entire stack of your Ember.js application is exercised during integration
+testing.
 
 ## Example
 
