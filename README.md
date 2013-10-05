@@ -52,4 +52,4 @@ test("people can browse to a post and leave a comment", function(){
 ```
 
 ## Dependencies
-`httpRespond` depends on [fakehr](https://github.com/trek/fakehr) and [FakeXMLHttpRequest](https://github.com/trek/FakeXMLHttpRequest). Until we live in the rosy future of standardized module and package systems, obtain both from gitbub and load them as part of your test suite.
+`httpRespond` depends on [fakehr](https://github.com/trek/fakehr) and [FakeXMLHttpRequest](https://github.com/trek/FakeXMLHttpRequest). Until we live in the rosy future of standardized module and package systems, obtain both from github and load them as part of your test suite.
