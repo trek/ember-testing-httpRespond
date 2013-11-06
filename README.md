@@ -4,7 +4,7 @@ Adds a `httpRespond` helper to Ember.Test for integration testing.
 This helper chains a promise and allows you to control where in the flow
 of execution an http response is emitted.
 
-This makes it easy to test sitautons like:
+This makes it easy to test situations like:
   
   * Loading screens
   * Button disabling while requests process
