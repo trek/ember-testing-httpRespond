@@ -44,7 +44,7 @@ test("people can browse to a post and leave a comment", function(){
   .then(function(){
     equal(find(".spinner").length, 1);
   })
-  .httpRespond("post", "/api/articles/1/comments", {id: 1, body: comment})
+  .httpRespond("post", "/api/articles/1/comments", {id: 1, body: comment}, 201)
   .then(function(){
     equal(find(".comment:contains('%@')".fmt(comment)).length, 1);
   });
