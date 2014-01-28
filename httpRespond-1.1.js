@@ -1,4 +1,4 @@
-Ember.Test.registerHelper('httpRespond', function(app, verb, url, body, status) {
+Ember.Test.registerAsyncHelper('httpRespond', function(app, verb, url, body, status) {
   if(typeof body !== 'string'){ body = JSON.stringify(body); }
 
   var found = fakehr.match(verb.toUpperCase(), url)
