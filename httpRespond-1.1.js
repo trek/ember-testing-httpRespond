@@ -1,7 +1,7 @@
-Ember.Test.registerAsyncHelper('httpRespond', function(app, verb, url, body, status) {
+Ember.Test.registerAsyncHelper('httpRespond', function(app, verb, url, body, status, requestBody) {
   if(typeof body !== 'string'){ body = JSON.stringify(body); }
-
-  var found = fakehr.match(verb.toUpperCase(), url)
+  if(typeof requestBody !== 'string'){ requestBody = JSON.stringify(requestBody); }
+  var found = fakehr.match(verb.toUpperCase(), url, 1, requestBody);
 
   if (found){
     Ember.run(function() {
