@@ -6,7 +6,7 @@
   ],
   "dependencies": {
     "FakeXMLHttpRequest": "*",
-    "fakehr": "git://github.com/tirana/fakehr.git"
+    "fakehr": "*"
   }
 }
 
