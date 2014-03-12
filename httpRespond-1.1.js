@@ -20,5 +20,5 @@ Ember.Test.registerAsyncHelper('httpRespond', function(app, verb, url, body, sta
   until we can merge into master and put some of this behind flags.
 */
 Ember.Test.onInjectHelpers(function() {
-  Ember.$(document).unbind("ajaxStart ajaxStop");
+  Ember.$(document).unbind("ajaxStart ajaxStop ajaxSend ajaxComplete");
 });
