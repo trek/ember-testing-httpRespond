@@ -18,7 +18,7 @@ testing.
 ## Example
 
 ```javascript
-module("commenting on a post", function(){
+module("commenting on a post", {
   setup: function(){
     fakehr.start();
   },
