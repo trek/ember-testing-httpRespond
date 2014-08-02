@@ -1,11 +1,11 @@
-function handleHttpRespond(app, verb, url, body, status) {
+function handleHttpRespond(app, verb, url, body, status, headers) {
   if(typeof body !== 'string'){ body = JSON.stringify(body); }
 
   var found = fakehr.match(verb.toUpperCase(), url)
 
   if (found){
     Ember.run(function() {
-      found.respond(status || 200, {'content-type': 'application/json'}, body);
+      found.respond(status || 200, headers || {'content-type': 'application/json'}, body);
     });
   } else {
     throw new Ember.Error("No request intercepted for " + verb.toUpperCase() + " " + url + ". Intercepted requests were: " + fakehr.requests.map(function(r){ return r.method + " " + r.url}).join(", "));
@@ -25,7 +25,7 @@ Ember.Test.registerAsyncHelper('visitAndRespond', function(app, path, verb, url,
     Ember.run(app, app.handleURL, path);
   }
 
-  handleHttpRespond(app, verb, url, body, status);
+  handleHttpRespond(app, verb, url, body, status, headers);
 });
 
 Ember.Test.registerAsyncHelper('httpRespond', handleHttpRespond);
